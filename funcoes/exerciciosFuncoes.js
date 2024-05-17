@@ -61,35 +61,84 @@ else if (valor > 200.00) {
 
 }
 
-let opcao = window.prompt("MENU\nDigite a opção desejada:\n\n1 - Funçao Semana \n\n2 - Funçao Par/Impar \n\n3 - Funçao Desconto")
+function exercicioLoopNumerosPares() {
+for(let num = 1; num <=10; num++){
+    if(num%2 == 0){
+        console.log(num);
+    }
+}
 
-switch (opcao) {
-    case"1":
-        exercicioSemana()
-        break;
+console.log("------------------------")
 
-    default:
-        break;
+for(let cont = 2; cont <= 10; cont+=2){
+    console.log(cont)
+}
 
 }
-switch (opcao) {
-    case"2":
-         exercicioParouImpar()
-        break;
 
-    default:
-        break;
+function exercicioLoopContagemRegressiva() {
+    let numero = parseInt(prompt("Digite um número para a contagem regressiva: "));
+
+console.log("Contagem regressiva está começando em: " + numero);
+
+while(numero >= 0){
+    console.log(numero);
+    numero--;
+}
+
+console.log("Contagem regressiva finalizada!");
 
 }
-switch (opcao) {
-    case"3":
-        exercicioDescontoProduto()
-        break;
 
-    default:
-        break;
+function exercicioLoopMaiorDeIdade() {
+    let idade = parseInt(prompt("Informe sua idade: "))
+
+while(idade < 18){
+    idade = parseInt(prompt("Você é menor de idade. Por favor, digte sua idade novamente: "));
+}
+
+console.log("Você é maior de idade. Sua idade é: " + idade);
 
 }
+
+let opcao;
+
+do {
+
+    opcao = window.prompt("MENU\nDigite a opção desejada:\n\n1 - Funçao Semana \n\n2 - Funçao Par/Impar \n\n3 - Funçao Desconto \n\n4 - Funçao Loop Numeros Pares \n\n5 - Funçao Loop Contagem Regressiva \n\n6 - Funçao Loop Maior de Idade")
+    
+    switch (opcao) {
+        case"1":
+            exercicioSemana()
+            break;
+    
+        case"2":
+            exercicioParouImpar()
+           break;
+        
+        case"3":
+           exercicioDescontoProduto()
+           break;
+    
+        case"4":
+           exercicioLoopNumerosPares()
+           break;
+    
+        case"5":
+            exercicioLoopContagemRegressiva()
+            break;
+    
+        case"6":
+            exercicioLoopMaiorDeIdade()
+            break;
+    
+    
+        default:
+            break;
+    
+    }
+
+} while ("opcao != sair")
 
 
 
