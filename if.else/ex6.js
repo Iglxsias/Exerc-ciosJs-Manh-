@@ -5,7 +5,6 @@
 // solicita o ano de nascimento de uma pessoa
 let data = parseInt(prompt("Digite o ano em que nasceu: "))
 
-// verifica se ela é maior de 18 anos
 
 if (data >= 2006){
     console.log("Maior de idade!")
